@@ -3,15 +3,17 @@
     width: 100%;
 }
 
-:root {
-    --index: calc(1vw + 1vh);
-}
-
 .contacts__link {
 text-decoration: underline;
 }
 
+.contacts_text_underline, .active {
+    list-style: none;
+    border-bottom: transparent;
+}
+
 /* HEADER */
+
 .header {
     padding: 135px 24px 90px 24px;
     align-items: center;
@@ -27,11 +29,6 @@ text-decoration: underline;
     font-family: "Raleway", sans-serif;
     font-size: 18px;
     font-weight: 400;
-}
-
-.active {
-    list-style: none;
-    border-bottom: transparent;
 }
 
 .menu-container {
@@ -107,25 +104,50 @@ text-decoration: underline;
     color: white;
 }
 
-.center {
-    padding-left: 288px;
+.aligned-text {
+    letter-spacing: 29px;
+}
+
+.aligned-text__start {
+    text-align: left;
+    letter-spacing: 29px;
+}
+
+.aligned-text__center {
+    text-align: center;
+    padding-right: 60px;
     padding-top: 10px;
 }
 
-.end {
+.aligned-text__end {
     text-align: end;
     padding-top: 16px;
+    letter-spacing: 18px;
+
+} 
+
+.aligned-text__start_letter {
+    letter-spacing: 10px;
 }
 
-.aligned-text__space-left {
-    margin-left: -22px;
+.aligned-text__center_letter {
+    padding-left: 30px;
 }
-.aligned-text__space-right {
-    margin-left: -22px;
+
+.aligned-text__end_letter {
+    letter-spacing: 30px;
+}
+
+.cover__description-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 256px;
+    grid-template-rows: 55px;
+    gap: 10px;
+    align-items: center;
+    margin-right: 30px;
 }
 
 .cover__description-text {
-    display: inline;
     font-family: "Raleway", sans-serif;
     font-size: 22px;
     font-weight: 400;
@@ -158,7 +180,7 @@ text-decoration: underline;
 }
 
 .lots__heading {
-    max-height: 74px;
+    line-height: 48px;
     width: 121px;
     margin-left: 62px;
     margin-bottom: 27px;
@@ -176,16 +198,12 @@ text-decoration: underline;
 
 }
 
-.card_wrapper  {
+.overlay {
     padding: 51px 40px 48px 40px;
     min-height: 563px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-}
-
-.overlay {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.6);
 }
@@ -300,7 +318,7 @@ text-decoration: underline;
     margin-bottom: 24px;
     padding-left: 0;
     white-space: inherit;
-    letter-spacing: 0.01em;
+    letter-spacing: 1%;
 }
 
 /* FOOTER */
@@ -311,11 +329,13 @@ text-decoration: underline;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
 .footer__menu-wrapper {
     display: flex;
     justify-content: start;
     padding-left: 60px;
 }
+
 .footer__menu-list {
     display: flex;
     flex-direction: column;
